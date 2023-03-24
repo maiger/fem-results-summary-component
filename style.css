@@ -1,0 +1,245 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* VARIABLES */
+:root {
+  /* COLORS */
+  /* PRIMARY */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+  /* BG VERSIONS */
+  --color-bg-light-red: hsla(0, 100%, 67%, 0.1);
+  --color-bg-orangey-yellow: hsla(39, 100%, 56%, 0.1);
+  --color-bg-green-teal: hsla(166, 100%, 37%, 0.1);
+  --color-bg-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+  /* GRADIENTS */
+  --color-slate-blue: hsl(252, 100%, 67%);
+  --color-royal-blue: hsl(241, 81%, 54%);
+  --color-violet-blue: hsla(256, 72%, 46%, 1);
+  --color-persian-blue: hsla(241, 72%, 46%, 0);
+  /* NEUTRAL */
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-gray-blue: hsl(224, 30%, 27%);
+
+  /* TEXT */
+  --text-para-size: 1.8rem;
+  --text-main-font: "Hanken Grotesk", sans-serif;
+}
+
+/* BREAKPOINTS */
+/* MOBILE: 375px */
+/* DESLTOP: 1440px */
+
+/* MAIN STYLES */
+html {
+  font-family: var(--text-main-font);
+  background-color: var(--color-light-gray);
+}
+
+.summary-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+}
+
+.container {
+  box-shadow: 10px 20px 30px hsla(241, 81%, 54%, 0.1);
+  display: flex;
+  border-radius: 2rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33rem;
+  background-image: linear-gradient(
+    180deg,
+    var(--color-slate-blue) 0%,
+    var(--color-royal-blue) 100%
+  );
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.results h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-light-lavender);
+  padding: 3rem;
+}
+
+.score-container {
+  width: 16rem;
+  padding: 3rem;
+  background-image: linear-gradient(
+    180deg,
+    var(--color-violet-blue) 0%,
+    var(--color-persian-blue) 100%
+  );
+  border-radius: 50%;
+}
+
+.score {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.limit {
+  font-size: 1.8rem;
+  color: var(--color-light-lavender);
+}
+
+.grade {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--color-white);
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.grade-text {
+  font-size: 1.8rem;
+  color: var(--color-light-lavender);
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0rem 4rem 4rem 4rem;
+}
+
+.summary {
+  width: 33rem;
+  padding: 3rem;
+}
+
+.summary h2 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  margin: 1.5rem 1rem 1.5rem 0rem;
+  border-radius: 1rem;
+}
+
+.category > div {
+  display: flex;
+}
+
+.category > div > img {
+  margin-right: 1rem;
+}
+
+.category-score {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.category-score span {
+  color: black;
+}
+
+.reaction {
+  background-color: var(--color-bg-light-red);
+  color: var(--color-light-red);
+}
+
+.memory {
+  background-color: var(--color-bg-orangey-yellow);
+  color: var(--color-orangey-yellow);
+}
+
+.verbal {
+  background-color: var(--color-bg-green-teal);
+  color: var(--color-green-teal);
+}
+
+.visual {
+  background-color: var(--color-bg-cobalt-blue);
+  color: var(--color-cobalt-blue);
+}
+
+.btn-continue {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  border: none;
+  border-radius: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-gray-blue);
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn-continue:hover {
+  background-image: linear-gradient(
+    180deg,
+    var(--color-slate-blue) 0%,
+    var(--color-royal-blue) 100%
+  );
+}
+
+/* DESKTOP BREAKPOINT*/
+@media only screen and (max-width: 1440px) {
+  /* Nothing really needed. */
+}
+
+/* INBETWEEN BREAKPOINT*/
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+/* MOBILE BREAKPOINT*/
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+
+  .summary-section {
+    justify-content: start;
+    align-items: start;
+  }
+
+  .container {
+    box-shadow: none;
+  }
+
+  .results {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .summary {
+    width: 100%;
+    height: 100%;
+  }
+}
