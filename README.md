@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click](https://your-solution-url.com)
-- Live Site URL: [Click](https://your-live-site-url.com)
+- Solution URL: [Here](https://github.com/maiger/fem-results-summary-component)
+- Live Site URL: [Here](https://maiger.github.io/fem-results-summary-component/)
 
 ## My process
 
